@@ -1,7 +1,7 @@
-<h2 class="text-center"> All our Flats (<%= @flats.length %>) </h2>
+<h2 class="text-center"> All our Flats </h2>
   <div class = "container">
     <div class="container" id="home-flats">
-      <h4 class="text-center">You searched for . We found x flats out of x on our website.</h4>
+      <h4 class="text-center">We found x flats out of <%= @flats.length %> on our website.</h4>
       <div class="row">
         <% @flats.each do |flat| %>
           <div class="col-xs-12 col-sm-4 col-md-3">
@@ -17,8 +17,8 @@
               </div>
               <div class="flat-card-actions">
                 <%= link_to "More info", flat_path(flat) %>
-                <%= link_to "Edit", edit_flat_path(flat) %>
-                <%= link_to "Remove", flat_path(flat), method: "DELETE" %>
+                <%= link_to "Edit", edit_flat_path(flat), class: "ml-3 text-warning" %>
+                <%= link_to "Remove", flat_path(flat), method: "DELETE", class: "ml-3 text-danger" %>
               </div>
             </div>
           </div>
@@ -26,4 +26,4 @@
       </div>
     </div>
   </div>
-<h1> <%= link_to "Create a new flat", new_flat_path %></h1>
+<!-- <h3> <%= link_to "Create a new flat", new_flat_path %></h3> -->
