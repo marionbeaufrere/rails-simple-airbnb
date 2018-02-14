@@ -1,0 +1,12 @@
+<div class = "container">
+<h1> Your list of flats </h1>
+<ul>
+<% @flats.each do |flat| %>
+  <h2> <li> <%= link_to flat.name, flat %> </h2>
+  <p> Price per night: <%= flat.price_per_night %> euro </li></p>
+  <p> <i class="fas fa-users"></i> <%= flat.number_of_guests %> </p>
+<% end %>
+</ul>
+</div>
+
+<h1> <%= link_to "Create a new flat", new_flat_path %></h1>
