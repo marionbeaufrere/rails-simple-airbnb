@@ -1,12 +1,22 @@
-<div class = "container">
-<h1> Your list of flats </h1>
-<ul>
-<% @flats.each do |flat| %>
-  <h2> <li> <%= link_to flat.name, flat %> </h2>
-  <p> Price per night: <%= flat.price_per_night %> euro </li></p>
-  <p> <i class="fas fa-users"></i> <%= flat.number_of_guests %> </p>
-<% end %>
-</ul>
-</div>
-
+<h2 class="text-center"> All our Flats (<%= @flats.length %>) </h2>
+  <div class = "container">
+    <div class="container" id="home-flats">
+      <h4 class="text-center">You searched for . We found x flats out of x on our website.</h4>
+      <div class="row">
+        <% @flats.each do |flat| %>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card" style="background-color: blue"> </div>
+              <div class="card-description">
+                <h3><%= link_to flat.name, flat %></h3>
+                <div class="card-category"> <%= flat.address %> </div>
+                <p><%= flat.description %></p>
+                <p> <i class="fas fa-euro"></i> <%= flat.price_per_night %> </li></p>
+                <p> <i class="fas fa-users"></i> <%= flat.number_of_guests %> </p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 <h1> <%= link_to "Create a new flat", new_flat_path %></h1>
