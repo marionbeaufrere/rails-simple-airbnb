@@ -1,0 +1,9 @@
+<div class="container">
+  <h1> <%= @flat.name %> </h1>
+  <%= link_to "Back to the list of flats", flats_path %>
+  <div id= "description">
+    <h3> <%= @flat.description %> </h3>
+  </div>
+  <div>
+  <%= link_to "Edit flat", edit_flat_path %>
+</div>
