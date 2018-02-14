@@ -6,9 +6,11 @@
         <% @flats.each do |flat| %>
           <div class="col-xs-12 col-sm-4 col-md-3">
             <div class="flat-card">
-             <!--   image_tag("'https://unsplash.com/photos/OrhRN2yhlos", height: '32', width: '32') -->
+              <div>
+              <%= image_tag("https://source.unsplash.com/random/#{rand(1390..1400)}*1200", class: "flat-img")%>
+              </div>
               <div class="flat-card-content">
-                <h3><%= link_to flat.name, flat %></h3>
+                <h4><%= link_to flat.name, flat %></h4>
                 <div class="card-category"> <%= flat.address %> </div>
                 <p> <i class="fas fa-euro"></i> <%= flat.price_per_night %> </li></p>
                 <p> <i class="fas fa-users"></i> <%= flat.number_of_guests %> </p>
