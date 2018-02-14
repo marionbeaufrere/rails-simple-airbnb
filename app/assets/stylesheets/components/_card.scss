@@ -2,6 +2,8 @@
   background-size: cover;
   height: 200px;
   width: 250px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .flat-card-content {
   height: 200px;
@@ -12,9 +14,14 @@
   margin: 5px;
   width: 250px;
   border: 2px solid $light-gray;
-  border-radius: 10px;
-  box-shadow: 5px 10px $light-gray;
+  border-radius: 5px;
+/*  box-shadow: 5px 10px $light-gray;*/
 }
 .flat-card-actions {
   padding: 10px;
+  width: 250px;
+}
+.card-content-container {
+  align-items: left;
+  padding: 5px;
 }
